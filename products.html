@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RVN Drinks</title>
+    <link rel="icon" type="image/x-icon"  href="./images/logo.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .sticky-nav {
+            transition: background-color 0.3s ease-in-out, padding 0.3s;
+        }
+        .navbar-scroll {
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: all 0.3s ease-in-out;
+        }
+        @keyframes fade-in {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+        animation: fade-in 1s ease-out forwards;
+    }
+    @keyframes fade-in {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+        animation: fade-in 1s ease-out forwards;
+    }
+    </style>
+</head>
+<body class="bg-gray-700" >
+    <!-- navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 transition-all duration-300 bg-gray-700">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <img class="h-12 rounded-xl" src="./images/logo.png" alt="logo">
+            <!-- Links -->
+            <div class="hidden md:flex space-x-8 text-lg font-semibold text-white">
+                <a href="./index.html" class=" hover:text-red-500 transition">Home</a>
+                <a href="./products.html" class=" hover:text-red-500 transition">Products</a>
+                <a href="./aboutus.html" class=" hover:text-red-500 transition">About Us</a>
+                <a href="./contactus.html" class=" hover:text-red-500 transition">Contact Us</a>
+            </div>
+            <div></div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl text-white focus:outline-none">
+                ☰
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex flex-col space-y-4 mt-4 text-center bg-gray-700 text-white p-4 md:hidden">
+            <a href="./index.html" class="block hover:text-red-500">Home</a>
+            <a href="./products.html" class="block hover:text-red-500">Products</a>
+            <a href="./aboutus.html" class="block hover:text-red-500">About Us</a>
+            <a href="./contactus.html" class="block hover:text-red-500">Contact Us</a>
+        </div>
+    </nav>
+      <!-- Our Products -->
+      <h2 class="text-4xl mt-32 text-center font-bold text-red-600">Our Products</h2>
+      <div class="flex mt-10 justify-center items-center flex-wrap " >
+        <!-- Product Card 1 -->
+        <div class="min-w-full sm:min-w-[50%] md:min-w-[33.33%] p-4 cursor-pointer "
+        onclick="openPopup('./images/1.png', 'Mango Drink', 'Experience the luscious taste of real mangoes in every sip. Our Mango Drink is crafted for a perfect balance of sweetness and refreshment. Enjoy the tropical delight anytime, anywhere!', ['120ml'])">
+            <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                <div>
+                    <img src="./images/1.png" alt="Product 1" class="h-56">
+                </div>
+                <h3 class="text-lg font-semibold mt-2">Mango Drink</h3>
+                <p>Rich, smooth, and bursting with real mango goodness!</p>
+            </div>
+        </div>
+        <!-- Product Card 2 -->
+        <div class="min-w-full sm:min-w-[50%] md:min-w-[33.33%] cursor-pointer p-4"
+        onclick="openPopup('./images/2.png', 'Apple Drink', 'Enjoy the crisp and juicy taste of real apples. Our Apple Drink is crafted to deliver a perfect blend of sweetness and refreshment. A delicious treat for any moment!', ['120ml'])">
+            <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                <div>
+                    <img src="./images/2.png" alt="Product 2" class="h-56 ">
+                </div>
+                <h3 class="text-lg font-semibold mt-2">Apple Drink</h3>
+                <p>Refreshing apple bliss in every sip!</p>
+            </div>
+        </div>
+        <!-- Product Card 3 -->
+        <div class="min-w-full sm:min-w-[50%] md:min-w-[33.33%] cursor-pointer p-4"
+        onclick="openPopup('./images/3.png', 'Lemon Juice', 'Experience the bold and citrusy kick of our Lemon Juice. Perfectly balanced for a refreshing burst of flavor. A zesty delight in every sip!', ['120ml'])">
+            <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                <div>
+                    <img src="./images/3.png" alt="Product 3" class=" h-56 ">
+                </div>
+                <h3 class="text-lg font-semibold mt-2">Lemon Juice</h3>
+                <p>Tangy, zesty, and refreshing!</p>
+            </div>
+        </div>
+        <!-- Product Card 4 -->
+        <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] cursor-pointer p-4"
+        onclick="openPopup('./images/4.png', 'Lemon Salt Soda', 'Enjoy the perfect blend of tangy lemon and a hint of salt in our Lemon Salt Soda. A refreshing twist that revitalizes your senses. Crisp, fizzy, and irresistibly tasty!', ['120ml'])">
+            <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                <div>
+                    <img src="./images/4.png" alt="Product 4" class=" h-56 ">
+                </div>
+                <h3 class="text-lg font-semibold mt-2">Lemon Salt Soda</h3>
+                <p>Salty, zesty, and ultra-refreshing!</p>
+            </div>
+        </div>
+        <!-- Product Card 5 -->
+        <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] cursor-pointer p-4"
+        onclick="openPopup('./images/4.png', 'Clear Lemon', 'Experience the bold citrus kick of our Clear Lemon drink. Perfectly balanced for a refreshing and invigorating taste. Pure, fizzy, and bursting with lemony goodness!', ['120ml'])">
+            <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                <div>
+                    <img src="./images/5.png" alt="Product 4" class=" h-56 ">
+                </div>
+                <h3 class="text-lg font-semibold mt-2">Clear Lemon</h3>
+                <p>Crisp, zesty, and ultra-refreshing!</p>
+            </div>
+        </div>
+        <!-- Product Card 6 -->
+        <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] cursor-pointer p-4"
+        onclick="openPopup('./images/6.png', 'Mixed Fruits', 'Enjoy a delightful blend of nature’s finest fruits in every sip. Our Mixed Fruits drink is a perfect harmony of sweetness and tanginess. A refreshing burst of multiple flavors in one!', ['120ml'])">
+            <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                <div>
+                    <img src="./images/6.png" alt="Product 4" class=" h-56 ">
+                </div>
+                <h3 class="text-lg font-semibold mt-2">Mixed Fruits</h3>
+                <p>A fruity fusion of vibrant flavors!</p>
+            </div>
+        </div>
+        <!-- Product Card 7 -->
+        <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] cursor-pointer p-4"
+        onclick="openPopup('./images/7.png', 'Orange Drink', 'Experience the vibrant taste of sun-ripened oranges in every sip. Our Orange Drink is a perfect balance of sweetness and tangy citrus goodness. A refreshing boost for any moment!', ['120ml'])">
+            <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                <div>
+                    <img src="./images/7.png" alt="Product 4" class=" h-56 ">
+                </div>
+                <h3 class="text-lg font-semibold mt-2">Orange Drink</h3>
+                <p>Zesty, sweet, and refreshingly citrusy!</p>
+            </div>
+        </div>
+        <!-- Product Card 8 -->
+        <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] cursor-pointer p-4"
+        onclick="openPopup('./images/8.png', 'Paneer Soda', 'Paneer Soda blends the crispness of soda with a nostalgic, refreshing taste. A classic South Indian favorite, it delivers a fizzy and invigorating experience. Perfect for cooling down anytime!', ['120ml'])">
+            <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                <div>
+                    <img src="./images/8.png" alt="Product 4" class=" h-56 ">
+                </div>
+                <h3 class="text-lg font-semibold mt-2">Paneer Soda</h3>
+                <p>Traditional fizz with a unique twist!</p>
+            </div>
+        </div>
+        <!-- Product Card 9 -->
+        <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] cursor-pointer p-4"
+        onclick="openPopup('./images/9.png', 'Soda', 'Our Soda is the ultimate thirst quencher, delivering a crisp and bubbly experience. Perfectly carbonated for a refreshing lift, it’s a great companion for any occasion. Stay cool and hydrated with every sip!', ['120ml'])">
+            <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                <div>
+                    <img src="./images/9.png" alt="Product 4" class=" h-56 ">
+                </div>
+                <h3 class="text-lg font-semibold mt-2">Soda</h3>
+                <p>Pure, crisp, and refreshing fizz!</p>
+            </div>
+        </div>
+        <!-- Product Card 10 -->
+        <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] cursor-pointer p-4"
+        onclick="openPopup('./images/10.png', 'Packaged Drinking Water', 'Our Packaged Drinking Water is purified to perfection, ensuring safety and freshness in every drop. Stay hydrated with the crisp, clean taste that revitalizes your body. The ultimate choice for pure and safe drinking water!', ['120ml'])">
+            <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                <div>
+                    <img src="./images/10.png" alt="Product 4" class=" h-56 ">
+                </div>
+                <h3 class="text-lg font-semibold mt-2">Packaged Drinking Water</h3>
+                <p>Pure, safe, and refreshing hydration!</p>
+            </div>
+        </div>
+      </div>
+      <hr>
+      <!-- pop-up -->
+    <div id="popup" style="z-index: 30;" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white w-[90%] max-w-[600px] rounded-lg shadow-lg p-6 relative">
+            <button onclick="closePopup()" class="absolute top-3 right-3 text-gray-600 hover:text-black text-xl">&times;</button>
+            
+            <div class="flex flex-col md:flex-row items-center md:items-start">
+                <img id="popupImage" src="" alt="Product Image" class="w-full md:w-1/2 object-contain max-h-[250px]">
+    
+                <div class="md:ml-6 w-full">
+                    <h2 id="popupTitle" class="text-xl font-semibold text-gray-800">Product Name</h2>
+                    <p id="popupDescription" class="text-gray-600 mt-2 max-h-[150px] overflow-auto">Product Description goes here...</p>
+    
+                    <div class="mt-4">
+                        <h3 class="text-gray-700 font-medium">Available Variations</h3>
+                        <div id="popupSizes" class="flex gap-2 mt-2">
+                            <span class="bg-gray-200 px-3 py-1 rounded-md text-sm">120ml</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-md text-sm">250ml</span>
+                            <span class="bg-gray-200 px-3 py-1 rounded-md text-sm">500ml</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      <!-- footer -->
+      <section id="contact" class="py-6 px-8 bg-gray-700 text-white text-center">
+        <div class=" flex justify-around items-center flex-wrap gap-10" >
+            <div class="flex flex-col justify-center items-center gap-4">
+                <img class="h-28 w-28 "  src="./images/logo.png" alt="logo">
+                <h2>Refreshing the world with  <br> premium-quality beverages since 1985!</h2>
+            </div>
+            <div class="flex flex-wrap justify-center gap-16 md:gap-32 items-center" >
+                <!-- quick links -->
+            <div class="text-left">
+                <h2 class="font-bold ">Quick Links</h2>
+                <h2  class="hover:text-gray-400 cursor-pointer"><a href="./index.html">Home</a></h2>
+                <h2 class="hover:text-gray-400 cursor-pointer"><a href="./products.html">Products</a></h2>
+                <h2 class="hover:text-gray-400 cursor-pointer"><a href="./aboutus.html">About Us</a></h2>
+                <h2 class="hover:text-gray-400 cursor-pointer"><a href="./contactus.html">Contact US</a></h2> 
+            </div>
+            <!-- contact details -->
+            <div class="text-left">
+                <h2 class="font-bold ">Contact Details</h2>
+                <div class="flex gap-2 items-center mt-1 " >
+                    <i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i>
+                    <h2>+91 9095796142</h2>
+                </div>
+              <div class="flex gap-2 items-center mt-1 " >
+                  <i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i>
+                  <h2>+91 9159088617</h2>
+              </div>
+              <div class="flex gap-2 items-center mt-1 " >
+                  <h2><i class="fa-solid fa-location-dot fa-sm" style="color: #ffffff;"></i> MIG-280, Tamil University,<br>Sindhamani,<br>MC Road,Thanjavur-613 010.</h2>
+               </div>
+               <div class="flex gap-2 items-center mt-1 " >
+                <h2><i class="fa-solid fa-location-dot fa-sm" style="color: #ffffff;"></i> 141, Sethilal Nagar,<br>Karaikal-609 602.</h2>
+             </div>
+               <div class="flex gap-2 items-center mt-1 " >
+                <i class="fa-solid fa-envelope fa-sm" style="color: #ffffff;"></i>
+                   <h2>scalarcodeinnovations@gmail.com</h2>
+               </div>
+            </div>
+            </div>
+            
+            <!-- follow us -->
+             <div class="flex flex-col gap-8">
+                <h2 class="font-bold">Follow Us On</h2>
+                <div class="flex gap-6">
+                    <i class="fa-brands fa-youtube fa-lg" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-instagram fa-lg" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-linkedin fa-lg" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-whatsapp fa-lg" style="color: #ffffff;"></i>
+                </div>
+             </div>
+        </div>
+        <hr class="mt-3">
+        <h2 class="mt-2">© 2025 RVN Drinks | All Rights Reserved</h2>
+    </section>
+
+    <script>AOS.init();</script>
+    <script src="./products.js" ></script>
+   
+</body>
+</html>

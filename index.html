@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RVN Drinks</title>
+    <link rel="icon" type="image/x-icon"  href="./images/logo.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .sticky-nav {
+            transition: background-color 0.3s ease-in-out, padding 0.3s;
+        }
+        .navbar-scroll {
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: all 0.3s ease-in-out;
+        }
+        @keyframes fade-in {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+        animation: fade-in 1s ease-out forwards;
+    }
+    @keyframes fade-in {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+        animation: fade-in 1s ease-out forwards;
+    }
+    </style>
+</head>
+<body >
+    <!-- navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <img class="h-12 rounded-xl" src="./images/logo.png" alt="logo">
+            <!-- Links -->
+            <div class="hidden md:flex space-x-8 text-lg font-semibold text-white">
+                <a href="./index.html" class=" hover:text-red-500 transition">Home</a>
+                <a href="./products.html" class=" hover:text-red-500 transition">Products</a>
+                <a href="./aboutus.html" class=" hover:text-red-500 transition">About Us</a>
+                <a href="./contactus.html" class=" hover:text-red-500 transition">Contact Us</a>
+            </div>
+            <div></div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl text-white focus:outline-none">
+                ☰
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex flex-col space-y-4 mt-4 text-center bg-gray-700 text-white p-4 md:hidden">
+            <a href="./index.html" class="block hover:text-red-500">Home</a>
+            <a href="./products.html" class="block hover:text-red-500">Products</a>
+            <a href="./aboutus.html" class="block hover:text-red-500">About Us</a>
+            <a href="./contactus.html" class="block hover:text-red-500">Contact Us</a>
+        </div>
+    </nav>
+      <!-- Hero Section -->
+    <section class=" flex items-center justify-center">
+        <div class=" hidden md:flex">
+            <img src="./images/bg.png" alt="hero">
+        </div>
+        <div class="md:hidden flex">
+            <img src="./images/bg1.png" alt="hero">
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="about" class="py-16 px-6 text-center bg-white">
+        <h2 class="text-4xl font-bold text-red-600">Our Story</h2>
+        <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto"> RVN Drinks has been crafting high-quality beverages that delight customers worldwide. Our journey started with a passion for excellence, and today, we bring you the finest range of refreshing drinks.</p>
+    </section>
+
+    <!-- product carousel -->
+    <h2 class="text-4xl text-center font-bold text-red-600">Our Product Range</h2>
+    <section class="relative w-full max-w-6xl mx-auto mt-10 overflow-hidden">
+        <div class="relative">
+            <div class="flex transition-transform duration-700 ease-in-out" id="productCarousel">
+                <!-- Product Card 1 -->
+                <div class="min-w-full sm:min-w-[50%] md:min-w-[33.33%] p-4">
+                    <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                        <div>
+                            <img src="./images/1.png" alt="Product 1" class="h-56">
+                        </div>
+                        <h3 class="text-lg font-semibold mt-2">Mango Drink</h3>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="min-w-full sm:min-w-[50%] md:min-w-[33.33%] p-4">
+                    <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                        <div>
+                            <img src="./images/2.png" alt="Product 2" class="h-56 ">
+                        </div>
+                        <h3 class="text-lg font-semibold mt-2">Apple Drink</h3>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="min-w-full sm:min-w-[50%] md:min-w-[33.33%] p-4">
+                    <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                        <div>
+                            <img src="./images/3.png" alt="Product 3" class=" h-56 ">
+                        </div>
+                        <h3 class="text-lg font-semibold mt-2">Lemon Juice</h3>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] p-4">
+                    <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                        <div>
+                            <img src="./images/4.png" alt="Product 4" class=" h-56 ">
+                        </div>
+                        <h3 class="text-lg font-semibold mt-2">Lemon Salt Soda</h3>
+                    </div>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] p-4">
+                    <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                        <div>
+                            <img src="./images/5.png" alt="Product 4" class=" h-56 ">
+                        </div>
+                        <h3 class="text-lg font-semibold mt-2">Clear Lemon</h3>
+                    </div>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] p-4">
+                    <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                        <div>
+                            <img src="./images/6.png" alt="Product 4" class=" h-56 ">
+                        </div>
+                        <h3 class="text-lg font-semibold mt-2">Mixed Fruits</h3>
+                    </div>
+                </div>
+                <!-- Product Card 7 -->
+                <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] p-4">
+                    <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                        <div>
+                            <img src="./images/7.png" alt="Product 4" class=" h-56 ">
+                        </div>
+                        <h3 class="text-lg font-semibold mt-2">Orange Drink</h3>
+                    </div>
+                </div>
+                <!-- Product Card 8 -->
+                <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] p-4">
+                    <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                        <div>
+                            <img src="./images/8.png" alt="Product 4" class=" h-56 ">
+                        </div>
+                        <h3 class="text-lg font-semibold mt-2">Paneer Soda</h3>
+                    </div>
+                </div>
+                <!-- Product Card 9 -->
+                <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] p-4">
+                    <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                        <div>
+                            <img src="./images/9.png" alt="Product 4" class=" h-56 ">
+                        </div>
+                        <h3 class="text-lg font-semibold mt-2">Soda</h3>
+                    </div>
+                </div>
+                <!-- Product Card 10 -->
+                <div class="min-w-full  sm:min-w-[50%] md:min-w-[33.33%] p-4">
+                    <div class="bg-white flex flex-col justify-center items-center shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105">
+                        <div>
+                            <img src="./images/10.png" alt="Product 4" class=" h-56 ">
+                        </div>
+                        <h3 class="text-lg font-semibold mt-2">Packaged Drinking Water</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Buttons -->
+            <button id="prevBtn" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+                ❮
+            </button>
+            <button id="nextBtn" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+                ❯
+            </button>
+        </div>
+    </section>
+    <!-- visions -->
+    <section class="relative w-full py-16 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6 uppercase tracking-wider animate-fade-in">Our Vision</h2>
+            <p class="text-lg max-w-2xl mx-auto opacity-80 animate-fade-in delay-200">
+                To revolutionize the beverage industry by delivering premium, refreshing, and innovative drinks while staying committed to quality, sustainability, and customer satisfaction.
+            </p>
+            
+            <!-- Vision Cards -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-lg transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-3">Quality First</h3>
+                    <p class="text-sm opacity-80">We strive for excellence, ensuring every sip is crafted with the finest ingredients.</p>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-lg transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-3">Innovation & Growth</h3>
+                    <p class="text-sm opacity-80">Continuously evolving with modern trends to create unique and refreshing experiences.</p>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-lg transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-3">Sustainability</h3>
+                    <p class="text-sm opacity-80">Committed to eco-friendly practices that contribute to a healthier planet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Us -->
+    <section class="relative w-full py-16 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6 uppercase tracking-wider animate-fade-in">Why Choose Us?</h2>
+            <p class="text-lg max-w-2xl mx-auto opacity-80 animate-fade-in delay-200">
+                Our commitment to excellence sets us apart. We deliver high-quality, refreshing beverages crafted with passion, innovation, and trust.
+            </p>
+            
+            <!-- Why Us Cards -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-lg transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-3">Premium Quality</h3>
+                    <p class="text-sm opacity-80">Crafted with the finest ingredients to ensure a superior taste experience.</p>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-lg transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-3">Innovative Flavors</h3>
+                    <p class="text-sm opacity-80">Bringing new and exciting flavors to refresh your moments.</p>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-lg transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-3">Trusted Legacy</h3>
+                    <p class="text-sm opacity-80">Years of expertise in delivering top-tier beverages worldwide.</p>
+                </div>
+    
+                <!-- Card 4 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-lg transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-3">Eco-Friendly Practices</h3>
+                    <p class="text-sm opacity-80">Committed to sustainability with eco-conscious packaging and production.</p>
+                </div>
+    
+                <!-- Card 5 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-lg transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-3">Customer Satisfaction</h3>
+                    <p class="text-sm opacity-80">Your happiness drives us—delivering joy in every sip.</p>
+                </div>
+    
+                <!-- Card 6 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-lg transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-3">Global Reach</h3>
+                    <p class="text-sm opacity-80">Expanding our flavors to bring refreshment worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- video -->
+    <section class="bg-gray-800 py-12 px-4 text-center">
+        <h2 class="text-3xl font-semibold text-white mb-6">Explore Our Beverage Factory</h2>
+        <div class="flex justify-center">
+            <iframe class="w-full max-w-3xl h-64 md:h-96 rounded-lg shadow-lg" 
+                src="https://www.youtube.com/embed/vkwgX6KCtaA" 
+                title="777 Soft drinks Factory" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+    <hr>
+      <!-- footer -->
+      <section id="contact" class="py-6 px-8 bg-gray-700 text-white text-center">
+        <div class=" flex justify-around items-center flex-wrap gap-10" >
+            <div class="flex flex-col justify-center items-center gap-4">
+                <img class="h-28 w-28 "  src="./images/logo.png" alt="logo">
+                <h2>Refreshing the world with  <br> premium-quality beverages since 1985!</h2>
+            </div>
+            <div class="flex flex-wrap justify-center gap-16 md:gap-32 items-center" >
+                <!-- quick links -->
+            <div class="text-left">
+                <h2 class="font-bold ">Quick Links</h2>
+                <h2  class="hover:text-gray-400 cursor-pointer"><a href="./index.html">Home</a></h2>
+                <h2 class="hover:text-gray-400 cursor-pointer"><a href="./products.html">Products</a></h2>
+                <h2 class="hover:text-gray-400 cursor-pointer"><a href="./aboutus.html">About Us</a></h2>
+                <h2 class="hover:text-gray-400 cursor-pointer"><a href="./contactus.html">Contact US</a></h2> 
+            </div>
+            <!-- contact details -->
+            <div class="text-left">
+                <h2 class="font-bold ">Contact Details</h2>
+                <div class="flex gap-2 items-center mt-1 " >
+                    <i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i>
+                    <h2>+91 9095796142</h2>
+                </div>
+              <div class="flex gap-2 items-center mt-1 " >
+                  <i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i>
+                  <h2>+91 9159088617</h2>
+              </div>
+              <div class="flex gap-2 items-center mt-1 " >
+                  <h2><i class="fa-solid fa-location-dot fa-sm" style="color: #ffffff;"></i> MIG-280, Tamil University,<br>Sindhamani,<br>MC Road,Thanjavur-613 010.</h2>
+               </div>
+               <div class="flex gap-2 items-center mt-1 " >
+                <h2><i class="fa-solid fa-location-dot fa-sm" style="color: #ffffff;"></i> 141, Sethilal Nagar,<br>Karaikal-609 602.</h2>
+             </div>
+               <div class="flex gap-2 items-center mt-1 " >
+                <i class="fa-solid fa-envelope fa-sm" style="color: #ffffff;"></i>
+                   <h2>scalarcodeinnovations@gmail.com</h2>
+               </div>
+            </div>
+            </div>
+            
+            <!-- follow us -->
+             <div class="flex flex-col gap-8">
+                <h2 class="font-bold">Follow Us On</h2>
+                <div class="flex gap-6">
+                    <i class="fa-brands fa-youtube fa-lg" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-instagram fa-lg" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-linkedin fa-lg" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-whatsapp fa-lg" style="color: #ffffff;"></i>
+                </div>
+             </div>
+        </div>
+        <hr class="mt-3">
+        <h2 class="mt-2">© 2025 RVN Drinks | All Rights Reserved</h2>
+    </section>
+
+    <script>AOS.init();</script>
+    <script src="./index.js" ></script>
+   
+</body>
+</html>

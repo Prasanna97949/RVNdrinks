@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RVN Drinks</title>
+    <link rel="icon" type="image/x-icon"  href="./images/logo.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .sticky-nav {
+            transition: background-color 0.3s ease-in-out, padding 0.3s;
+        }
+        .navbar-scroll {
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: all 0.3s ease-in-out;
+        }
+        @keyframes fade-in {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    </style>
+</head>
+<body class="bg-gray-900 text-white " >
+    <!-- navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 transition-all duration-300 bg-gray-700">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <img class="h-12 rounded-xl" src="./images/logo.png" alt="logo">
+            <!-- Links -->
+            <div class="hidden md:flex space-x-8 text-lg font-semibold text-white">
+                <a href="./index.html" class=" hover:text-red-500 transition">Home</a>
+                <a href="./products.html" class=" hover:text-red-500 transition">Products</a>
+                <a href="./aboutus.html" class=" hover:text-red-500 transition">About Us</a>
+                <a href="./contactus.html" class=" hover:text-red-500 transition">Contact Us</a>
+            </div>
+            <div></div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl text-white focus:outline-none">
+                ☰
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex flex-col space-y-4 mt-4 text-center bg-gray-700 text-white p-4 md:hidden">
+            <a href="./index.html" class="block hover:text-red-500">Home</a>
+            <a href="./products.html" class="block hover:text-red-500">Products</a>
+            <a href="./aboutus.html" class="block hover:text-red-500">About Us</a>
+            <a href="./contactus.html" class="block hover:text-red-500">Contact Us</a>
+        </div>
+    </nav>
+      <!-- Contact Us -->
+      <section class="container mt-28 mx-auto px-6 py-12">
+        <div class="flex flex-col lg:flex-row bg-white shadow-lg rounded-lg overflow-hidden">
+            <!-- Contact Details -->
+            <div class="w-full lg:w-1/2 p-8">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-4">Get in Touch</h2>
+                <p class="text-gray-600 mb-6">We'd love to hear from you! Reach out to us using the details below.</p>
+                <div class="space-y-4">
+                    <p class="flex items-center text-gray-700"><span class="font-bold">📍 Address:</span> 123, Vallam, Thanjavur</p>
+                    <p class="flex items-center text-gray-700"><span class="font-bold">📞 Phone:</span> +91 98765 43210</p>
+                    <p class="flex items-center text-gray-700"><span class="font-bold">✉ Email:</span> contact@rvndrinks.com</p>
+                    <p class="flex items-center text-gray-700"><span class="font-bold">⏰ Working Hours:</span> Mon-Sat: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <!-- Map Section -->
+            <div class="w-full lg:w-1/2">
+                <iframe 
+                    class="w-full h-96 lg:h-full"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.907938823478!2d-122.41941568468117!3d37.7749292797591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064df5b088b%3A0xa98c2c4f7f0df508!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1630294479634!5m2!1sen!2sin"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+      
+
+      <!-- footer -->
+      <section id="contact" class="py-6 px-8 bg-gray-700 text-white text-center">
+        <div class=" flex justify-around items-center flex-wrap gap-10" >
+            <div class="flex flex-col justify-center items-center gap-4">
+                <img class="h-28 w-28 "  src="./images/logo.png" alt="logo">
+                <h2>Refreshing the world with  <br> premium-quality beverages since 1985!</h2>
+            </div>
+            <div class="flex flex-wrap justify-center gap-16 md:gap-32 items-center" >
+                <!-- quick links -->
+            <div class="text-left">
+                <h2 class="font-bold ">Quick Links</h2>
+                <h2  class="hover:text-gray-400 cursor-pointer"><a href="./index.html">Home</a></h2>
+                <h2 class="hover:text-gray-400 cursor-pointer"><a href="./products.html">Products</a></h2>
+                <h2 class="hover:text-gray-400 cursor-pointer"><a href="./aboutus.html">About Us</a></h2>
+                <h2 class="hover:text-gray-400 cursor-pointer"><a href="./contactus.html">Contact US</a></h2> 
+            </div>
+            <!-- contact details -->
+            <div class="text-left">
+                <h2 class="font-bold ">Contact Details</h2>
+                <div class="flex gap-2 items-center mt-1 " >
+                    <i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i>
+                    <h2>+91 9095796142</h2>
+                </div>
+              <div class="flex gap-2 items-center mt-1 " >
+                  <i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i>
+                  <h2>+91 9159088617</h2>
+              </div>
+              <div class="flex gap-2 items-center mt-1 " >
+                  <h2><i class="fa-solid fa-location-dot fa-sm" style="color: #ffffff;"></i> MIG-280, Tamil University,<br>Sindhamani,<br>MC Road,Thanjavur-613 010.</h2>
+               </div>
+               <div class="flex gap-2 items-center mt-1 " >
+                <h2><i class="fa-solid fa-location-dot fa-sm" style="color: #ffffff;"></i> 141, Sethilal Nagar,<br>Karaikal-609 602.</h2>
+             </div>
+               <div class="flex gap-2 items-center mt-1 " >
+                <i class="fa-solid fa-envelope fa-sm" style="color: #ffffff;"></i>
+                   <h2>scalarcodeinnovations@gmail.com</h2>
+               </div>
+            </div>
+            </div>
+            
+            <!-- follow us -->
+             <div class="flex flex-col gap-8">
+                <h2 class="font-bold">Follow Us On</h2>
+                <div class="flex gap-6">
+                    <i class="fa-brands fa-youtube fa-lg" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-instagram fa-lg" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-linkedin fa-lg" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-whatsapp fa-lg" style="color: #ffffff;"></i>
+                </div>
+             </div>
+        </div>
+        <hr class="mt-3">
+        <h2 class="mt-2">© 2025 RVN Drinks | All Rights Reserved</h2>
+    </section>
+
+    <script>AOS.init();</script>
+    <script src="./aboutus.js" ></script>
+   
+</body>
+</html>
